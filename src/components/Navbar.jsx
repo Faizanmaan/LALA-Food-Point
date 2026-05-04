@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logoImg from '../assets/lala_logo.png';
 
 const Navbar = ({ currentPage, onNavigate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,10 +22,7 @@ const Navbar = ({ currentPage, onNavigate }) => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} id="navbar">
       <div className="navbar__inner">
         <div className="navbar__logo" onClick={() => handleLinkClick('home')}>
-          <div className="logo-circle">
-            <span className="logo-text">LALA'S</span>
-            <span className="logo-sub">FOOD JOINT</span>
-          </div>
+          <img src={logoImg} alt="Lala's Food Joint" className="navbar__logo-img" />
         </div>
         <ul className={`navbar__links ${isMenuOpen ? 'open' : ''}`} id="nav-links">
           <li>

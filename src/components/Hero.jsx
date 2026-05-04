@@ -1,4 +1,7 @@
 import React from 'react';
+import heroImg from '../assets/hero_img.png';
+import chilliImg from '../assets/redchilli.png';
+import friesImg from '../assets/fries.png';
 
 const Hero = ({ onNavigate }) => {
   return (
@@ -27,15 +30,15 @@ const Hero = ({ onNavigate }) => {
         </div>
         <div className="hero__visual">
           <div className="hero__circle">
-            <span className="hero__emoji">🍔</span>
+            <img src={heroImg} alt="Burger" className="hero__img" />
             <div className="hero__badge">
               <span className="hero__badge-from">FROM</span>
               <span className="hero__badge-price">$13.99</span>
             </div>
           </div>
-          <div className="hero__d1">🌶️</div>
-          <div className="hero__d2">⭐</div>
-          <div className="hero__d3">🍟</div>
+          <div className="hero__d2"><img src={chilliImg} alt="Chilli" className="hero__deco-img" /></div>
+          {/* <div className="hero__d2">⭐</div> */}
+          <div className="hero__d1"><img src={friesImg} alt="Fries" className="hero__deco-img" /></div>
         </div>
       </div>
       <div className="hero__scroll">
