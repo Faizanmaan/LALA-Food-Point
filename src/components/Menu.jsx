@@ -86,10 +86,12 @@ const Menu = ({ initialCategory }) => {
                   className={`menu-item ${cat.id === 'deals' ? 'deal-item' : ''}`}
                   style={{ '--item-accent': item.accent }}
                 >
-                  {item.badge && <span className="menu-item-badge" style={{ background: item.accent || 'var(--red)' }}>{item.badge}</span>}
                   <div className="menu-item-body">
                     <div className="menu-item-top">
-                      <h3 className="menu-item-name">{item.name}</h3>
+                      <div className="menu-item-name-group">
+                        <h3 className="menu-item-name">{item.name}</h3>
+                        {item.badge && <span className="menu-item-badge" style={{ background: item.accent || 'var(--red)' }}>{item.badge}</span>}
+                      </div>
                       <span className="menu-item-price" style={{ color: item.accent || 'var(--red)' }}>
                         {item.price}
                       </span>
